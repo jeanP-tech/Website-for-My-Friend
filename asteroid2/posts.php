@@ -4,20 +4,9 @@
   <title>Cat-Asteroid2</title>
   </head>
   <body>
-      <?php
-      session_start();
-      if(issset($_SESSION['user']){
-          <a class="link" href="logout.php">logout</a>
-      }
-      else{
-        /*header("location:index.php");*/
-        <ul id="menu">
-          <li><a href="login.php">Login</a></li>
-          <li><a href="register.php">Register</a></li>
-        </ul>
-      }
-      $user = $_SESSION['user'];
-      ?>
+    <?php
+    include"header.php"
+    ?>
 
       <input type="button" value="write" onclick="window.location.href='write.php'" />
       <h2 align="center">My list</h2>

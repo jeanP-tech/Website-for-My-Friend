@@ -7,9 +7,10 @@
   <?php
   session_start();
   if($_SESSION['user']){
+    echo "hello";
   }
   else{
-    header("location:index.php");
+    
   }
   $user = $_SESSION['user'];
   ?>

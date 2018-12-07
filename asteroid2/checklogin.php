@@ -27,7 +27,7 @@ $conn = mysqli_connect(
             if($password == $table_password)
             {
               $_SESSION['user'] = $username;
-              header("location: home.php");
+              header("location: index.php");
             }
         }
         else {

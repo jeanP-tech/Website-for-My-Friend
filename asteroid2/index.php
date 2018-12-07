@@ -1,12 +1,10 @@
-<!DOCTYPE html>
 <html>
-  <head>
-  <title>Cat-Asteroid2</title>
-  </head>
+  <?php
+  include"header.php"
+  ?>
   <body>
       <ul id="menu">
-        <li><a href="login.php">Login</a></li>
-        <li><a href="register.php">Register</a></li>
+
       </ul>
       <ul id="sidebar">
         <li><a href="me.php">Me</a></li>
