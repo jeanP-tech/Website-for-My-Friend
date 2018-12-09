@@ -5,7 +5,8 @@
   </head>
   <body>
     <?php
-    include"header.php"
+    include"header.php";
+    include"sidebar.php";
     ?>
 
       <input type="button" value="write" onclick="window.location.href='write.php'" />
@@ -31,11 +32,20 @@
           {
             print "<tr>";
                 print '<td align="center">'. $row['id'] . "</td>";
-                print '<td align="center">'. $row['title'] . "</td>";
+                print '<td align="center">'. "<a href=\"posts_detail.php?id={$row['id']}\">{$row['title']}</a>" . "</td>";
                 print '<td align="center">'. $row['date'] . "</td>";
-
             print "</tr>";
           }
+          /*
+          $sql = "SELECT * FROM forum WHERE id={$_GET['id']}";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_array($result);
+          $article = array(
+            'title'=>$row['title'],
+            'description'=>$row['description']
+          );
+          */
+
          ?>
       </table>
   </body>
