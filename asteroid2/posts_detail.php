@@ -22,5 +22,7 @@
      ?>
     <h2><?=$article['title']?></h2>
     <?=$article['description']?>
+
+    <a href="update.php?id=<?=$_GET['id']?>">update</a>
   </body>
 </html>
