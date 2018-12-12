@@ -29,7 +29,7 @@ $conn = mysqli_connect(
           WHERE
             id = '$id'
           ");
-      header("location:posts.php");
+      header("<a href="posts_detail.php?id=">");
     }
     else {
       header("location:home.php");
