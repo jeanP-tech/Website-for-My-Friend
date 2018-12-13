@@ -29,10 +29,11 @@ $conn = mysqli_connect(
           WHERE
             id = '$id'
           ");
-      header("<a href="posts_detail.php?id=">");
+
     }
     else {
       header("location:home.php");
     }
 
 ?>
+<meta http-equiv="refresh" content="0;url=posts_detail.php?id=<?=$id?>">

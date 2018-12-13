@@ -24,9 +24,13 @@
     <?=$article['description']?>
 
     <a href="update.php?id=<?=$_GET['id']?>">update</a>
+
     <form action="process_delete.php" method="post">
       <input type="hidden" name="id" value="'.$_GET['id'].'">
       <input type="submit" value="delete">
     </form>
+
+
+
   </body>
 </html>
