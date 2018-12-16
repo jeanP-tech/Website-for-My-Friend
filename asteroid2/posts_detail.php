@@ -5,8 +5,8 @@
   </head>
   <body>
     <?php
-    include"../header.php";
-    include"../sidebar.php";
+    include"header.php";
+    include"sidebar.php";
     $conn = mysqli_connect(
       "localhost",
       "root",

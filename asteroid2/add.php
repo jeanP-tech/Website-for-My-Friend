@@ -9,7 +9,7 @@ $conn = mysqli_connect(
     if($_SESSION['user']){
     }
     else {
-      header("location:../index.php");
+      header("location:index.php");
     }
 
     if($_SERVER['REQUEST_METHOD'] = "POST")
@@ -24,7 +24,7 @@ $conn = mysqli_connect(
       header("location: posts.php");
     }
     else {
-      header("location:../home.php");
+      header("location:home.php");
     }
 
 ?>

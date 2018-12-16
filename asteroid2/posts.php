@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Cat-Asteroid2</title>
+    <title>Cat-Asteroid2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
     <?php
@@ -9,15 +11,17 @@
     include"sidebar.php";
     ?>
 
-      <input type="button" value="write" onclick="window.location.href='write.php'" />
-      <h2 align="center">My list</h2>
-      <table border="1px" width="80%">
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>date</th>
+      <h2 align="center">Posts</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">date</th>
 
-        </tr>
+          </tr>
+      </thead>
+      <tbody>
         <?php
           $conn = mysqli_connect(
             "localhost",
@@ -31,7 +35,7 @@
           while($row = mysqli_fetch_array($query))
           {
             print "<tr>";
-                print '<td align="center">'. $row['id'] . "</td>";
+                print '<th scope="row" align="center">'. $row['id'] . "</td>";
                 print '<td align="center">'. "<a href=\"posts_detail.php?id={$row['id']}\">{$row['title']}</a>" . "</td>";
                 print '<td align="center">'. $row['date'] . "</td>";
             print "</tr>";
@@ -47,6 +51,26 @@
           */
 
          ?>
+       </tbody>
       </table>
+      <hr/>
+      <a href="write.php" role="button" class="btn btn-outline-secondary float-right">write</a>
+      <div class="text-center">
+        <ul class="pagination">
+          <li class="page-item">
+           <a class="page-link" href="#" aria-label="Previous">
+             <span aria-hidden="true">&laquo;</span>
+             <span class="sr-only">Previous</span>
+           </a>
+         </li>
+          <li class="page-item"><a class="page-link" href="posts.php">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </body>
 </html>

@@ -10,7 +10,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="index.php">Home</a>
       <a href="me.php">Me</a>
-      <a href="post/posts.php">Posts</a>
+      <a href="posts.php">Posts</a>
     </div>
 
       <div id="main">
