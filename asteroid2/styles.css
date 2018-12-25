@@ -1,16 +1,24 @@
+.container {
+  width: 80%;
+}
+
 /*header*/
 #header {
   float: right;
   margin: 0;
+  height: 50px;
 }
 
 #header li{
   list-style: none;
   float: left;
+  margin-right: 30px;
+  margin-top: 20px;
+  vertical-align: middle;
 }
 
 #header li a {
-  color: black;
+
 }
 
 /* register */

@@ -10,6 +10,8 @@
     include"header.php";
     include"sidebar.php";
     ?>
+
+<!--
       <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
       <tr>
         <form id="form1" name="form1" method="post" action="add.php">
@@ -38,5 +40,32 @@
         </form>
       </tr>
       </table>
+-->
+
+      <table class="table table-bordered">
+    <thead>
+        <caption> New Topic </caption>
+    </thead>
+    <tbody>
+        <form action="add.php" method="post" encType="multiplart/form-data">
+            <tr>
+                <th>Title: </th>
+                <td><input name="title" type="text" id="topic" class="form-control"></td>
+            </tr>
+            <tr>
+                <th>Description: </th>
+                <td><textarea cols="30"  name="description" id="detail" class="form-control"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="Submit" value="Post" class="pull-right"/>
+                </td>
+            </tr>
+        </form>
+    </tbody>
+</table>
+
+
   </body>
 </html>
